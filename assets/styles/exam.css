@@ -7,3 +7,86 @@
     outline: none;
     font-family: "Glory", sans-serif;
 }
+
+/*start media*/
+/*small*/
+@media (min-width : 768px)
+{
+    .container
+    {
+        width: 750px;
+    }
+}
+
+/*Medium*/
+@media (min-width : 992px)
+{
+    .container
+    {
+        width: 970px;
+    }
+}
+
+/*Large*/
+@media (min-width : 1200px)
+{
+    .container
+    {
+        width: 1170px;
+    }
+}
+/*end media*/
+
+.heading
+{
+    line-height: 1.5;
+    margin: auto;
+    position: relative;
+    height: 100vh;
+    text-align: center;
+}
+.container
+{
+    position: absolute;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.heading .text
+{
+    padding: 20px;
+}
+.buttons
+{
+    padding: 20px;
+}
+.heading .buttons form input[type="text"]
+{
+    border: 1px solid #bebebe;
+    width: 310px;
+    height: 40px;
+    border-radius: 5px;
+}
+.heading .buttons form input[type="button"]
+{
+    border: 1px solid none;
+    border-radius: 5px;
+    background-color: rgb(96, 230, 125);
+    color: white;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.heading .buttons form input[value="Enter"]
+{
+    width: 310px;
+    height: 40px;
+}
+
+.heading .buttons form input:hover[type="button"]
+{
+    background-color: rgb(125, 176, 125);
+}
