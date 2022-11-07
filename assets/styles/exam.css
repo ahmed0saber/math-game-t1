@@ -7,3 +7,60 @@
     outline: none;
     font-family: "Glory", sans-serif;
 }
+.container{
+    margin: 12px auto;
+    width: calc(100% - 24px);
+    max-width: 400px;
+    padding: 12px;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.container .text{
+    text-align: center;
+    margin: 0 0 12px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 6px;
+}
+.container .text p{
+    font-size: 20px;
+}
+.container .buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.container .buttons input[type="text"]{
+    border: 1px solid #bebebe;
+    width: 100%;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    padding: 12px;
+    font-size: 18px;
+}
+.container .buttons input[type="button"]{
+    border: 1px solid none;
+    border-radius: 5px;
+    background-color: rgb(96, 230, 125);
+    color: white;
+    width: calc((100% - 24px) / 3);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px;
+    cursor: pointer;
+}
+.container .buttons input[value="Enter"]{
+    width: 100%;
+}
+.container .buttons input:hover[type="button"]{
+    background-color: rgb(125, 176, 125);
+}
