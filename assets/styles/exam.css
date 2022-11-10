@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,7 +7,8 @@
     outline: none;
     font-family: "Glory", sans-serif;
 }
-nav{
+
+nav {
     padding: 12px;
     box-shadow: 0px 0px 2px 2px #32323212;
     height: 58px;
@@ -15,12 +16,14 @@ nav{
     flex-direction: row;
     align-items: center;
 }
-nav a{
+
+nav a {
     text-decoration: none;
     color: #323232;
     font-size: 20px;
 }
-.container{
+
+.container {
     margin: 12px auto;
     width: calc(100% - 24px);
     max-width: 400px;
@@ -32,7 +35,8 @@ nav a{
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
 }
-.container .text{
+
+.container .text {
     text-align: center;
     margin: 0 0 12px 0;
     display: flex;
@@ -40,16 +44,19 @@ nav a{
     width: 100%;
     gap: 6px;
 }
-.container .text p{
+
+.container .text p {
     font-size: 20px;
 }
-.container .buttons{
+
+.container .buttons {
     display: flex;
     flex-direction: row;
     gap: 12px;
     flex-wrap: wrap;
 }
-.container .buttons input[type="text"]{
+
+.container .buttons input[type="text"] {
     border: 1px solid #bebebe;
     width: 100%;
     border-radius: 4px;
@@ -60,7 +67,8 @@ nav a{
     padding: 12px;
     font-size: 18px;
 }
-.container .buttons input[type="button"]{
+
+.container .buttons input[type="button"] {
     border: 1px solid none;
     border-radius: 5px;
     background-color: #097edb;
@@ -72,9 +80,11 @@ nav a{
     cursor: pointer;
     transition-duration: 0.1s;
 }
-.container .buttons input[value="Enter"]{
+
+.container .buttons input[value="Enter"] {
     width: 100%;
 }
-.container .buttons input:hover[type="button"]{
+
+.container .buttons input:hover[type="button"] {
     opacity: 0.8;
 }
