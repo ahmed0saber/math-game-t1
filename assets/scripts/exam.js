@@ -15,7 +15,7 @@ function handleInput(e){
         currentNumber = ""
     }else if (e.target.value == "Enter") {
         if(currentNumber === ""){
-            console.log("Type your answer first")
+            alert("Type your answer first")
             return
         }
         if (parseInt(currentNumber) == currentResult) {
@@ -26,7 +26,7 @@ function handleInput(e){
             currentNumber = ""
             generateNewQuestion()
         }else{
-            console.log("Wrong Answer")
+            alert("Wrong Answer")
             showSubmitScoreForm()
         }
     }else{
@@ -74,7 +74,7 @@ submitBtn.addEventListener("click", submitScoreToLocalStorage)
 function submitScoreToLocalStorage(){
     let leaderboardData = []
     if(usernameInput.value.trim().length < 1){
-        console.log("Username is required")
+        alert("Username is required")
         return
     }
     leaderboardData = getLeaderboardDataFromLocalStorage()
