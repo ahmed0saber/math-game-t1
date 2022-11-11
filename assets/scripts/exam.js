@@ -15,18 +15,18 @@ function handleInput(e){
         currentNumber = ""
     }else if (e.target.value == "Enter") {
         if(currentNumber === ""){
-            alert("Type your answer first")
+            console.log("Type your answer first")
             return
         }
         if (parseInt(currentNumber) == currentResult) {
-            alert("Right Answer")
+            console.log("Right Answer")
             currentScore += 10;
             scoreHolder.innerHTML = currentScore;
             resultHolder.value = ""
             currentNumber = ""
             generateNewQuestion()
         }else{
-            alert("Wrong Answer")
+            console.log("Wrong Answer")
             showSubmitScoreForm()
         }
     }else{
@@ -37,8 +37,8 @@ function handleInput(e){
 }
 
 function generateNewQuestion(){
-    const firstNumber = Math.ceil(Math.random() * 10);
-    const secondNumber = Math.ceil(Math.random() * 10);
+    const firstNumber = Math.floor((Math.random() * 10) + currentScore / 10);
+    const secondNumber = Math.floor((Math.random() * 10) + currentScore / 10);
     const operation = ["+", "-", "*", "%"];
     const randomOperation = Math.floor(Math.random() * (operation.length));
     const operator = operation[randomOperation];
@@ -74,14 +74,11 @@ submitBtn.addEventListener("click", submitScoreToLocalStorage)
 function submitScoreToLocalStorage(){
     let leaderboardData = []
     if(usernameInput.value.trim().length < 1){
-        alert("Username is required")
+        console.log("Username is required")
         return
     }
     leaderboardData = getLeaderboardDataFromLocalStorage()
-    leaderboardData.push({
-        username: usernameInput.value,
-        score: currentScore
-    })
+    leaderboardData = setScoreInSortedPosition(leaderboardData)
     setLeaderboardDataToLocalStorage(leaderboardData)
     showGameOverScreen()
 }
@@ -100,4 +97,28 @@ function setLeaderboardDataToLocalStorage(data){
 function showGameOverScreen(){
     submitFormContainer.style.display = "none"
     gameoverScreenContainer.style.display = "flex"
+}
+
+function setScoreInSortedPosition(arr){
+    let tempArray = [], rightPositionIsFound = false
+    for(let i = 0; i < arr.length; ){
+        if(arr[i].score >= currentScore || rightPositionIsFound){
+            tempArray.push(arr[i])
+            i++
+        }else{
+            tempArray.push({
+                username: usernameInput.value,
+                score: currentScore
+            })
+            rightPositionIsFound = true
+        }
+    }
+    if(!rightPositionIsFound){
+        tempArray.push({
+            username: usernameInput.value,
+            score: currentScore
+        })
+    }
+
+    return tempArray
 }
