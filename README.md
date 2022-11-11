@@ -1,2 +1,2 @@
 # math-game-t1
-https://math-gamified.onrender.com
+https://ahmed0saber.github.io/math-game-t1/
