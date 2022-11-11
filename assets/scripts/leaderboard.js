@@ -1,20 +1,8 @@
 const getLeaderboardDataFromLocalStorage = () => {
-    // some static data, we will replace it with the real data soon
-    const localStorageData = [{
-            username: "Aya",
-            score: 190
-        },
-        {
-            username: "Manar",
-            score: 180
-        },
-        {
-            username: "Nada",
-            score: 170
-        }
-    ]
-
-    return localStorageData
+    if(localStorage.getItem("leaderboard")){
+        return JSON.parse(localStorage.getItem("leaderboard"))
+    }
+    return []
 }
 
 const hidden = document.querySelector(".rows-container")
