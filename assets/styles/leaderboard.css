@@ -8,7 +8,7 @@
     font-family: "Glory", sans-serif;
 }
 
-nav{
+nav {
     padding: 12px;
     box-shadow: 0px 0px 2px 2px #32323212;
     height: 58px;
@@ -16,7 +16,8 @@ nav{
     flex-direction: row;
     align-items: center;
 }
-nav a{
+
+nav a {
     text-decoration: none;
     color: #323232;
     font-size: 20px;
@@ -58,6 +59,10 @@ nav a{
     cursor: pointer;
 }
 
+.container .content .btn-primary:hover {
+    opacity: 0.8;
+}
+
 .container .row-content {
     padding: 12px;
     margin: 12px 0 0 0;
@@ -92,13 +97,14 @@ nav a{
 
 .container .exam-content .text {
     width: calc((100% - 12px) / 3);
+    word-break: break-all;
 }
 
 .container .exam-content .text p {
     font-size: 20px;
 }
 
-.rows-container{
+.rows-container {
     display: flex;
     flex-direction: column;
     gap: 12px;
