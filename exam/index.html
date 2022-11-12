@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>Exam | Math Gamified</title>
+        <meta name="description" content="A website where you can practice math in a fun way with our easy-to-play simple game"/>
+        <meta name="keywords" content="mathgamified, math gamified, math game, math exam, math, gamification, leaderboard">
+        <meta name="og:title" content="Exam | Math Gamified">
+        <meta name="og:description" content="A website where you can practice math in a fun way with our easy-to-play simple game">
+        <link rel='stylesheet' href="../assets/styles/exam.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Glory&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <a href="../">
+                <h1>Math Gamified</h1>
+            </a>
+        </nav>
+        <div class="container">
+            <div class="game-container">
+                <div class="text">
+                    <h2>Math Exam</h2>
+                    <h3>Score: <span id="score">0</span></h3>
+                    <p id="question">1 + 3 = ??</p>
+                </div>
+                <div class="buttons">
+                    <input type="text" name="display" id="result" disabled>
+                    <input type="button" value="1">
+                    <input type="button" value="2">
+                    <input type="button" value="3">
+                    <input type="button" value="4">
+                    <input type="button" value="5">
+                    <input type="button" value="6">
+                    <input type="button" value="7">
+                    <input type="button" value="8">
+                    <input type="button" value="9">
+                    <input type="button" value="Clear">
+                    <input type="button" value="0">
+                    <input type="button" value="-">
+                    <input type="button" value="Enter">
+                </div>
+            </div>
+            <div class="submit-form-container">
+                <h2>Submit your score now and join our leaderboard</h2>
+                <input type="text" placeholder="Enter your username">
+                <button>Submit</button>
+            </div>
+            <div class="gameover-screen-container">
+                <h2>Your score has been submited successfully</h2>
+                <div class="btns">
+                    <a href="../">back to home</a>
+                    <a href="../leaderboard/">view leaderboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='../assets/scripts/exam.js'></script>
+</body>
+</html>
