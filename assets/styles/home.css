@@ -26,7 +26,7 @@ nav a{
     justify-content: center;
     width: 100%;
     max-width: 600px;
-    height: calc(100vh - 58px);
+    height: calc(100vh - 58px - 66.67px);
     margin: auto;
 }
 .container{
@@ -73,4 +73,31 @@ nav a{
     .main {
         width: 100%;
     }
+}
+.footer
+{
+    padding: 12px;
+}
+.footer .foot
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.footer .foot p a
+{
+    text-decoration: none;
+    color: #097edb;
+}
+.footer .foot p a:not(:last-child)::after
+{
+    content: " | ";
+}
+.footer .foot p a:hover
+{
+    color: #044b85;
 }
