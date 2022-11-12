@@ -54,9 +54,10 @@ nav a {
     border-radius: 4px;
     background-color: #097edb;
     font-size: 20px;
-    color: #f7f7f7;
+    color: #fff;
     text-align: center;
     cursor: pointer;
+    transition-duration: 0.1s;
 }
 
 .container .content .btn-primary:hover {
@@ -97,7 +98,7 @@ nav a {
 
 .container .exam-content .text {
     width: calc((100% - 12px) / 3);
-    word-break: break-all;
+    word-break: break-word;
 }
 
 .container .exam-content .text p {
